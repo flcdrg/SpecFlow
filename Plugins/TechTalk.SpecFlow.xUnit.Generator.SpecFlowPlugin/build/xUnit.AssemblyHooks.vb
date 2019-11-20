@@ -3,7 +3,7 @@
 <Assembly: Global.Xunit.TestFramework("TechTalk.SpecFlow.xUnit.SpecFlowPlugin.XunitTestFrameworkWithAssemblyFixture", "TechTalk.SpecFlow.xUnit.SpecFlowPlugin")>
 <Assembly: Global.TechTalk.SpecFlow.xUnit.SpecFlowPlugin.AssemblyFixture(GetType(PROJECT_ROOT_NAMESPACE_XUnitAssemblyFixture))>
 
-<GeneratedCode>
+<GeneratedCode("SpecFlow", "")>
 Public Class PROJECT_ROOT_NAMESPACE_XUnitAssemblyFixture
     Implements Global.System.IDisposable
 

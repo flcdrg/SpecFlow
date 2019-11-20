@@ -3,7 +3,7 @@ using System.CodeDom.Compiler;
 using global::Microsoft.VisualStudio.TestTools.UnitTesting;
 using global::TechTalk.SpecFlow;
 
-[GeneratedCode]
+[GeneratedCode("SpecFlow", "")]
 [TestClass]
 public class PROJECT_ROOT_NAMESPACE_MSTestAssemblyHooks
 {

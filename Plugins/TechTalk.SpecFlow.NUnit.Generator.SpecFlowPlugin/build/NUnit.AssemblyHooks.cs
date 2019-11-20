@@ -3,7 +3,7 @@ using System.CodeDom.Compiler;
 using global::NUnit.Framework;
 using global::TechTalk.SpecFlow;
 
-[GeneratedCode]
+[GeneratedCode("SpecFlow", "")]
 [SetUpFixture]
 public class PROJECT_ROOT_NAMESPACE_NUnitAssemblyHooks
 {
