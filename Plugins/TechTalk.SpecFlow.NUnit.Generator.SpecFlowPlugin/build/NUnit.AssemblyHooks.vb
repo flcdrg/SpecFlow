@@ -4,7 +4,7 @@ Imports System
 Imports System.CodeDom.Compiler
 Imports System.Reflection
 
-<GeneratedCode>
+<GeneratedCode("SpecFlow", "")>
 <SetUpFixture>
 Public NotInheritable Class PROJECT_ROOT_NAMESPACE_NUnitAssemblyHooks
     <OneTimeSetUp>
