@@ -12,14 +12,12 @@
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Remove="build\xUnit.AssemblyHooks.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="build\xUnit.AssemblyHooks.cs" />
+    <Compile Remove="build\xUnit.AssemblyHooks.template.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="All" />
+    <PackageReference Include="MSBuild.AdditionalTasks" Version="0.1.35" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,4 +26,11 @@
     <ProjectReference Include="..\TechTalk.SpecFlow.xUnit.SpecFlowPlugin\TechTalk.SpecFlow.xUnit.SpecFlowPlugin.csproj" />
   </ItemGroup>
 
+  <Target Name="WriteAssemblyHooksVersion" AfterTargets="GetBuildVersion" BeforeTargets="BeforeCompile" Condition="$(DesignTimeBuild) != 'true' OR '$(BuildingProject)' == 'true'">
+    <ReplaceTextInFileTask InputFile="$(MSBuildThisFileDirectory)\build\xUnit.AssemblyHooks.template.cs" OutputFile="$(MSBuildThisFileDirectory)\build\xUnit.AssemblyHooks.cs" TextToReplace="NUGET_VERSION" TextToReplaceWith="$(NuGetPackageVersion)" />
+
+    <ItemGroup>
+      <None Include="$(MSBuildThisFileDirectory)\build\xUnit.AssemblyHooks.cs" />
+    </ItemGroup>
+  </Target>
 </Project>
