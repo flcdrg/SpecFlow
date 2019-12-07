@@ -4,7 +4,7 @@ Imports System
 Imports System.Reflection
 Imports System.CodeDom.Compiler
 
-<GeneratedCode("SpecFlow", "")>
+<GeneratedCode("SpecFlow", "SPECFLOW_VERSION")>
 <TestClass>
 Public NotInheritable Class PROJECT_ROOT_NAMESPACE_MSTestAssemblyHooks
     <AssemblyInitialize>
